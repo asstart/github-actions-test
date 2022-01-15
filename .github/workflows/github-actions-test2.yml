@@ -9,6 +9,8 @@ jobs:
         shell: bash
         env:
           THE_QUESTION: "What is the meaning of life?"
+      - name: Upload the answer
+        uses: actions/upload-artifact@v2
         with:
           name: answer-file
           path: answer.txt
@@ -16,6 +18,9 @@ jobs:
     needs: ask-question-job
     runs-on: ubuntu-latest
     steps:
+      - name: Download the answer
+        uses: actions/download-artifact@v2
+        with: answer-file
       - name: Show the answer
         run: cat answer.txt
-        with: answer-file
+        
