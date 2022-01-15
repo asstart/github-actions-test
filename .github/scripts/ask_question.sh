@@ -6,7 +6,7 @@ echo "Need a bit of time to figure out answer..."
 echo "Approximately about 10 million years..."
 echo "huh..."
 
-sleep 1s
+sleep 10s
 
 echo "Answer have found out"
 
