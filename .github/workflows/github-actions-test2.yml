@@ -2,6 +2,7 @@ name: Question job
 on: push
 jobs:
   ask_question-job:
+  runs-on: ubuntu-latest
     steps:
       - name: Ask the question job
         run: /scripts/ask_question.sh
@@ -9,6 +10,7 @@ jobs:
         env:
           THE_QUESTION: "What is the meaning of life?"
   show-answer-job:
+    runs-on: ubuntu-latest
     steps:
       - name: Show the answer
         run: cat answer.txt
