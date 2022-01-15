@@ -4,10 +4,10 @@ jobs:
   ask-question-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Check ask_question permissions
-        run: ls -al .github/scripts/
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Ask the question job
-        run: .github/scripts/ask_question.sh
+        run: ./.github/scripts/ask_question.sh
         shell: bash
         env:
           THE_QUESTION: "What is the meaning of life?"
