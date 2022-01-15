@@ -1,0 +1,12 @@
+name: WF with syntax err
+on: 
+  push:
+    branches:
+      - 'release/*'
+jobs:
+  Err-wf:
+    # run-on: ubuntu-latest #uncomment this to test linter
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This job should be invalid by workflow linter becaus it's run-on instead runs-on"
+  
