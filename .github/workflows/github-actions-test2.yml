@@ -3,12 +3,12 @@ on: push
 jobs:
   ask_question-job:
     steps:
-      name: Ask the question job
-      run: /scripts/ask_question.sh
-      shell: bash
-      env:
-        THE_QUESTION: "What is the meaning of life?"
+      - name: Ask the question job
+        run: /scripts/ask_question.sh
+        shell: bash
+        env:
+          THE_QUESTION: "What is the meaning of life?"
   show-answer-job:
-    step:
-      name: Show the answer
-      run: cat answer.txt
+    steps:
+      - name: Show the answer
+        run: cat answer.txt
