@@ -1,5 +1,5 @@
 name: Lint Workflow files
-on: [pull-request]
+on: pull_request
 jobs:
   lint_workflow:
     runs-on: ubuntu-latest
