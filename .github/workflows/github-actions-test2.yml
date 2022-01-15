@@ -3,12 +3,12 @@ on: push
 jobs:
   ask_question-job:
   runs-on: ubuntu-latest
-    steps:
-      - name: Ask the question job
-        run: /scripts/ask_question.sh
-        shell: bash
-        env:
-          THE_QUESTION: "What is the meaning of life?"
+  steps:
+    - name: Ask the question job
+      run: /scripts/ask_question.sh
+      shell: bash
+      env:
+        THE_QUESTION: "What is the meaning of life?"
   show-answer-job:
     runs-on: ubuntu-latest
     steps:
