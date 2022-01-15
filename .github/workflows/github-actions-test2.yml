@@ -1,0 +1,29 @@
+name: Question job
+on: push
+jobs:
+  ask-question-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Ask the question job
+        run: ./.github/scripts/ask_question.sh
+        shell: bash
+        env:
+          THE_QUESTION: "What is the meaning of life?"
+      - name: Upload the answer
+        uses: actions/upload-artifact@v2
+        with:
+          name: answer-file
+          path: answer.txt
+  show-answer-job:
+    needs: ask-question-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download the answer
+        uses: actions/download-artifact@v2
+        with: 
+          name: answer-file
+      - name: Show the answer
+        run: cat answer.txt
+        
