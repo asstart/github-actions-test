@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check ask_question permissions
-        run: ls -al /.github/scripts/
+        run: ls -al ./.github/scripts/
       - name: Ask the question job
         run: ./.github/scripts/ask_question.sh
         shell: bash
