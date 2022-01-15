@@ -1,7 +1,7 @@
 name: Question job
 on: push
 jobs:
-  ask_question-job:
+  ask-question-job:
     runs-on: ubuntu-latest
     steps:
       - name: Ask the question job
