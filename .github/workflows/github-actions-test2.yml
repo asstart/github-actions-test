@@ -20,7 +20,8 @@ jobs:
     steps:
       - name: Download the answer
         uses: actions/download-artifact@v2
-        with: answer-file
+        with: 
+          name: answer-file
       - name: Show the answer
         run: cat answer.txt
         
