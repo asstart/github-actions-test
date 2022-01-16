@@ -1,3 +1,4 @@
+#Test action from marketplace. Working in pair with ./github/workflows/err-wf.yml.
 name: Lint Workflow files
 on: pull_request
 jobs:

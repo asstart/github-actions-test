@@ -1,0 +1,19 @@
+# Test using secrtes
+name: Test secret usage
+on: push
+jobs:
+  print-secret-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Try print secret env
+        env: 
+          SUPER_SECRET: ${{ secrets.test3_secret }}
+        run: echo "Thi is my secret: $(SUPER_SECRET)"
+  use-secret-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run sh with secret
+        env:
+          SUPER_SECRET: ${{ secrets.test3_secret }}
+          run: ./.github/scripts/test_secret.sh
+          shell: bash
