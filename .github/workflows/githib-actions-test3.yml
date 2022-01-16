@@ -15,5 +15,5 @@ jobs:
       - name: Run sh with secret
         env:
           SUPER_SECRET: ${{ secrets.test3_secret }}
-          run: ./.github/scripts/test_secret.sh
-          shell: bash
+        run: ./.github/scripts/test_secret.sh
+        shell: bash
