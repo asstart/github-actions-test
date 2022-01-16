@@ -1,3 +1,4 @@
+# Workflow with error in syntax(Need uncomment line below). Used to test action from marketplace in ./githib/workflows/test-action-from-marketplace.yaml which lint workflow files
 name: WF with syntax err
 on: 
   push:
