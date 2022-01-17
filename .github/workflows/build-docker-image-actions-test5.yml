@@ -8,6 +8,6 @@ jobs:
       - name: build image
         env:
           PROGRAM_USER: SUPERUSER
-        run: docker build -t hw-github-actions-test:0.0.1 .
+        run: docker build -t ghcr.io/asstart/hw-github-actions-test:0.0.1 .
       - name: push image
         run:  docker push ghcr.io/asstart/hw-github-actions-test:0.0.1
