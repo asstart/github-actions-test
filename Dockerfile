@@ -25,7 +25,8 @@ RUN \
     adduser -D ${APP_USER} && chown -R ${APP_USER}:${APP_USER} /home/${APP_USER}
 COPY --from=packager "$JAVA_HOME" "$JAVA_HOME"
 COPY --from=builder /src/target/github-actions-test-*.jar /home/${APP_USER}/app.jar
-RUN chmod 755 ${JAVA_HOME} && \
+RUN \
+    chmod 755 ${JAVA_HOME} && \
     chmod 755 /home/${APP_USER}/app.jar
 USER ${APP_USER}
 ENTRYPOINT ["java","-jar","/home/app/app.jar"]
