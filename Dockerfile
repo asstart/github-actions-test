@@ -16,7 +16,7 @@ RUN /usr/lib/jvm/java-17-openjdk/bin/jlink \
 
 FROM alpine:3.15.0
 LABEL maintainer="Artem Astashov asst.artem@gmail.com"
-ENV JAVA_HOME=/opt/java-minimal
+LABEL org.opencontainers.image.source="https://github.com/asstart/github-actions-test"
 ENV PATH="$PATH:$JAVA_HOME/bin"
 ENV APP_USER=app
 ENV APP_UID=1001
